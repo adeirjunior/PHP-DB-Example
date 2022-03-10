@@ -8,21 +8,20 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 require 'database.php';
 
 // POST DATA
-$data = json_decode(file_get_contents("php://input"));
 
 if (
-    isset($data->name)
-    && isset($data->email)
-    && isset($data->password)
-    && isset($data->country)
-    && isset($data->city)
-    && isset($data->job)
-    && !empty(trim($data->name))
-    && !empty(trim($data->email))
-    && !empty(trim($data->password))
-    && !empty(trim($data->country))
-    && !empty(trim($data->city))
-    && !empty(trim($data->job))
+    isset($_POST['name'])
+    && isset($_POST['name'])
+    && isset($_POST['name'])
+    && isset($_POST['name'])
+    && isset($_POST['name'])
+    && isset($_POST['name'])
+    && !empty(trim($_POST['name']))
+    && !empty(trim($_POST['name']))
+    && !empty(trim($_POST['name']))
+    && !empty(trim($_POST['name']))
+    && !empty(trim($_POST['name']))
+    && !empty(trim($_POST['name']))
 ) {
     $username = mysqli_real_escape_string($con, trim($data->name));
     $useremail = mysqli_real_escape_string($con, trim($data->email));

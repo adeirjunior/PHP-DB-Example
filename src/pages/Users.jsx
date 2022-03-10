@@ -6,7 +6,11 @@ function Users() {
     const [users, setUsers] = useState([])
 
     useEffect(()=>{
+        try{
         getUsers()
+        } catch(e){
+            console.log(e.message)
+        }
     }, []);
     const getUsers = () => {
         const url = 'http://localhost/test/api/users.php';
